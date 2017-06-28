@@ -50,7 +50,7 @@ function createSpeaker(tokenizer,debug){
     var results = []
     .concat(
       tokens.filter(function(token){ return token.pos === "感動詞"})
-      .map(function(token){ return token.basic_form + "!"})
+      .map(function(token){ return token.basic_form + "!!!!"})
     )
     .concat(
       tokens.filter(function(token){ return token.pos === "名詞" && token.surface_form.length > 1})
