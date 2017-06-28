@@ -69,6 +69,10 @@ function createSpeaker(tokenizer,debug){
       .map(function(token){ return token.basic_form　+ "!"})
     )
     .concat(
+      tokens.filter(function(token){ return token.pos_detail_1 === "副詞"})
+      .map(function(token){ return token.basic_form　+ "!!"})
+    )
+    .concat(
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
       .map(function(token){ return "うん。";})
     )
