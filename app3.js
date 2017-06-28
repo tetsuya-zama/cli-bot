@@ -86,6 +86,11 @@ function createSpeaker(tokenizer,debug){
       tokens.filter(function(token){ return token.surface_form === "おなかすいた"})
       .map(function(token){ return "ラーメン食べよう！";})
     );
+    //Add Kodama 2017/6/28 17:45
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "アメリカ"})
+      .map(function(token){ return "USA！USA！";})
+    );
 
     if(debug){
       console.log("##回答候補##");
