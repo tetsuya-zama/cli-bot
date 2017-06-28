@@ -76,7 +76,12 @@ function createSpeaker(tokenizer,debug){
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
       .map(function(token){ return "天下一の兵！（By上杉景勝）";})
+    )
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "武田" || token.surface_form === "信玄"})
+      .map(function(token){ return "風林火山";})
     );
+    
 
     if(debug){
       console.log("##回答候補##");
