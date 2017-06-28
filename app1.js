@@ -75,6 +75,9 @@ function createSpeaker(tokenizer,debug){
     .concat(
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
       .map(function(token){ return "うん。";})
+    ).concat(
+      tokens.filter(function(token){ return token.surface_form === "眠い"})
+      .map(function(token){ return "寝てください";})
     )
     //Add Taiko 2017/6/28 15:47
     .concat(
