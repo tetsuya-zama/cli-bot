@@ -44,13 +44,13 @@ function createSpeaker(tokenizer,debug){
       console.dir(tokens);
     }
     /**
-    * この下の50行目〜74行目を編集して、Botからの応答を変化させてみよう!
+    * この下の50行目～74行目を編集して、Botからの応答を変化させてみよう!
     * 例　「うん。」　=> 「うん!!」
     */
     var results = []
     .concat(
       tokens.filter(function(token){ return token.pos === "感動詞"})
-      .map(function(token){ return token.basic_form + "!"})
+      .map(function(token){ return token.basic_form + "？"})
     )
     .concat(
       tokens.filter(function(token){ return token.pos === "名詞" && token.surface_form.length > 1})
