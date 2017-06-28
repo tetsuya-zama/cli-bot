@@ -74,7 +74,7 @@ function createSpeaker(tokenizer,debug){
     )
     //Add sameshima
     .concat(
-      tokens.filter(function(token){ return token.surface_form === "小栗旬" || token.surface_form === "小栗旬"})
+      tokens.filter(function(token){ return token.surface_form === "小栗" || token.surface_form === "旬"})
       .map(function(token){ return "かっこいいよね";})
     )
     //Add Taiko 2017/6/28 15:47
