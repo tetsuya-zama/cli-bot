@@ -76,6 +76,11 @@ function createSpeaker(tokenizer,debug){
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
       .map(function(token){ return "天下一の兵！（By上杉景勝）";})
+    )
+    //Add Taiko 2017/6/28 16:06
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "NST" && token.pos_detail_1 === "固有名詞"})
+      .map(function(token){ return "NRIシステムテクノの事ですね";})
     );
 
     if(debug){
