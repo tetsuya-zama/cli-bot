@@ -80,7 +80,12 @@ function createSpeaker(tokenizer,debug){
     .concat(
       tokens.filter(function(token){ return token.surface_form === "猫" || token.surface_form === "ネコ"})
       .map(function(token){ return "もふもふだよねー";})
+    )
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "武田" || token.surface_form === "信玄"})
+      .map(function(token){ return "風林火山";})
     );
+    
 
     if(debug){
       console.log("##回答候補##");
