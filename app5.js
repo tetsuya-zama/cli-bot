@@ -62,7 +62,7 @@ function createSpeaker(tokenizer,debug){
     )
     .concat(
       tokens.filter(function(token){ return token.pos === "動詞"})
-      .map(function(token){ return "そーなんだぁ!"})
+      .map(function(token){ return "そーなんだぁぁぁぁぁぁぁぁぁぁぁ!"})
     )
     .concat(
       tokens.filter(function(token){ return token.pos_detail_1 === "終助詞"})
