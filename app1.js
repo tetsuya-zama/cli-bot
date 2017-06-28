@@ -69,13 +69,27 @@ function createSpeaker(tokenizer,debug){
       .map(function(token){ return token.basic_form　+ "!"})
     )
     .concat(
+      tokens.filter(function(token){ return token.pos_detail_1 === "副詞"})
+      .map(function(token){ return token.basic_form　+ "!!"})
+    )
+    .concat(
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
       .map(function(token){ return "うん。";})
+    ).concat(
+      tokens.filter(function(token){ return token.surface_form === "眠い"})
+      .map(function(token){ return "寝てください";})
     )
     //Add Taiko 2017/6/28 15:47
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
       .map(function(token){ return "天下一の兵！（By上杉景勝）";})
+    )
+    /*
+    Add Kimura 2017/06/28
+    */
+    .concat(
+      tokens.filter(function(token){ return token.pos === "形容動詞語幹"})
+      .map(function(token){ return "たぶん" + token.basic_form + "．．．"})
     );
 
     if(debug){

@@ -44,7 +44,7 @@ function createSpeaker(tokenizer,debug){
       console.dir(tokens);
     }
     /**
-    * この下の50行目〜74行目を編集して、Botからの応答を変化させてみよう!
+    * この下の50行目～74行目を編集して、Botからの応答を変化させてみよう!
     * 例　「うん。」　=> 「うん!!」
     */
     var results = []
@@ -70,7 +70,7 @@ function createSpeaker(tokenizer,debug){
     )
     .concat(
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
-      .map(function(token){ return "うん。";})
+      .map(function(token){ return "あいうえお";})
     )
     //Add Taiko 2017/6/28 15:47
     .concat(

@@ -72,11 +72,25 @@ function createSpeaker(tokenizer,debug){
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
       .map(function(token){ return "うん。";})
     )
+    //Add sameshima
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "小栗" || token.surface_form === "旬"})
+      .map(function(token){ return "めっちゃかっこいいよね";})
+    )
     //Add Taiko 2017/6/28 15:47
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
       .map(function(token){ return "天下一の兵！（By上杉景勝）";})
+    )
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "猫" || token.surface_form === "ネコ"})
+      .map(function(token){ return "もふもふだよねー";})
+    )
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "武田" || token.surface_form === "信玄"})
+      .map(function(token){ return "風林火山";})
     );
+    
 
     if(debug){
       console.log("##回答候補##");
