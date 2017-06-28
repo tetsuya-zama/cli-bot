@@ -76,6 +76,11 @@ function createSpeaker(tokenizer,debug){
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
       .map(function(token){ return "天下一の兵！（By上杉景勝）";})
+    )
+    //Add SHIN 2017/6/28 17:46
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "おなかすいた"})
+      .map(function(token){ return "ラーメン食べよう！";})
     );
 
     if(debug){
