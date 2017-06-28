@@ -72,6 +72,11 @@ function createSpeaker(tokenizer,debug){
       tokens.filter(function(token){ return token.surface_form === "？" || token.surface_form === "?"})
       .map(function(token){ return "うん。";})
     )
+    //Add sameshima
+    .concat(
+      tokens.filter(function(token){ return token.surface_form === "小栗旬" || token.surface_form === "小栗旬"})
+      .map(function(token){ return "かっこいいよね";})
+    )
     //Add Taiko 2017/6/28 15:47
     .concat(
       tokens.filter(function(token){ return token.surface_form === "真田" || token.surface_form === "幸村"})
